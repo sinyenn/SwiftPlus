@@ -66,7 +66,7 @@ class SPHttpRequest: NSObject {
     
     public func addCookies(cookiesMap:[String:String]) -> SPHttpRequest {
         for (name,value) in cookiesMap {
-            addCookie(name, value)
+           _ = addCookie(name, value)
         }
         return self
     }
@@ -95,21 +95,23 @@ class SPHttpRequest: NSObject {
     
     public func build() -> SPHttpRequest {
         self.request = URLRequest(url: self.url)
-        if self.httpMethod == "GET" {
-            var urlStr = url.absoluteString
-            if urlStr.contains("?") {
-                if urlStr.hasSuffix("?") || urlStr.hasSuffix("&") {
-                    urlStr += SPHttpUtil.paramMapToQueryString(parameterMap)
+        if parameterMap.count > 0 {
+            if self.httpMethod == "GET" {
+                var urlStr = url.absoluteString
+                if urlStr.contains("?") {
+                    if urlStr.hasSuffix("?") || urlStr.hasSuffix("&") {
+                        urlStr += SPHttpUtil.paramMapToQueryString(parameterMap)
+                    }else{
+                        urlStr += "&" + SPHttpUtil.paramMapToQueryString(parameterMap)
+                    }
                 }else{
-                    urlStr += "&" + SPHttpUtil.paramMapToQueryString(parameterMap)
+                    urlStr += "?" + SPHttpUtil.paramMapToQueryString(parameterMap)
                 }
-            }else{
-                urlStr += "?" + SPHttpUtil.paramMapToQueryString(parameterMap)
+                self.url = URL(string:urlStr)!
+                self.request = URLRequest(url: self.url)
+            }else if self.httpMethod == "POST" {
+                self.request.httpBody = SPHttpUtil.paramMapToQueryString(parameterMap).data(using: String.Encoding.utf8)
             }
-            self.url = URL(string:urlStr)!
-            self.request = URLRequest(url: self.url)
-        }else if self.httpMethod == "POST" {
-            self.request.httpBody = SPHttpUtil.paramMapToQueryString(parameterMap).data(using: String.Encoding.utf8)
         }
         self.request.httpMethod = self.httpMethod
         for (k, v) in self.headerMap {
