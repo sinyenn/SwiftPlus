@@ -72,12 +72,12 @@ class SPHttpRequest: NSObject {
     }
     
     public func addCookie(_ cookie:HTTPCookie) -> SPHttpRequest{
-        SPHCM.setCookie(self.url.host!, cookie)
+        SPHttpCookieManager.setCookie(self.url.host!, cookie)
         return self
     }
     
     public func addCookies(_ cookies:[HTTPCookie]) -> SPHttpRequest{
-        SPHCM.setCookies(self.url.host!, cookies)
+        SPHttpCookieManager.setCookies(self.url.host!, cookies)
         return self
     }
     
@@ -119,7 +119,7 @@ class SPHttpRequest: NSObject {
         }
         
         var cookieStr = "";
-        for cookie in SPHCM.getCookies(url.host!) {
+        for cookie in SPHttpCookieManager.getCookies(url.host!) {
             cookieStr += cookie.name + "=" + cookie.value + ";"
         }
         if cookieStr != "" {

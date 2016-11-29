@@ -17,6 +17,10 @@
 		2A07F4571D9523AD00FD82F1 /* SPHttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07F4561D9523AD00FD82F1 /* SPHttpUtil.swift */; };
 		2A07F45A1D952CD900FD82F1 /* SPConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07F4591D952CD900FD82F1 /* SPConvertUtil.swift */; };
 		2A6DC89C1D9659E500D46EEC /* SPHttpCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6DC89B1D9659E500D46EEC /* SPHttpCookieManager.swift */; };
+		2AA0767E1DED313200181694 /* SPRandomUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0767D1DED313200181694 /* SPRandomUtil.swift */; };
+		2AA076801DED4D0B00181694 /* IntExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0767F1DED4D0B00181694 /* IntExtend.swift */; };
+		2AA076821DED6AB000181694 /* DoubleExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA076811DED6AB000181694 /* DoubleExtend.swift */; };
+		2AA076841DED6D4100181694 /* FloatExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA076831DED6D4100181694 /* FloatExtend.swift */; };
 		2AF21E7B1D9CE26D00318421 /* UIDeviceExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF21E7A1D9CE26D00318421 /* UIDeviceExtend.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		2A07F4561D9523AD00FD82F1 /* SPHttpUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHttpUtil.swift; sourceTree = "<group>"; };
 		2A07F4591D952CD900FD82F1 /* SPConvertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConvertUtil.swift; sourceTree = "<group>"; };
 		2A6DC89B1D9659E500D46EEC /* SPHttpCookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHttpCookieManager.swift; sourceTree = "<group>"; };
+		2AA0767D1DED313200181694 /* SPRandomUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRandomUtil.swift; sourceTree = "<group>"; };
+		2AA0767F1DED4D0B00181694 /* IntExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtend.swift; sourceTree = "<group>"; };
+		2AA076811DED6AB000181694 /* DoubleExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtend.swift; sourceTree = "<group>"; };
+		2AA076831DED6D4100181694 /* FloatExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtend.swift; sourceTree = "<group>"; };
 		2AF21E7A1D9CE26D00318421 /* UIDeviceExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2A07F4591D952CD900FD82F1 /* SPConvertUtil.swift */,
+				2AA0767D1DED313200181694 /* SPRandomUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -110,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				2AF21E7A1D9CE26D00318421 /* UIDeviceExtend.swift */,
+				2AA0767F1DED4D0B00181694 /* IntExtend.swift */,
+				2AA076811DED6AB000181694 /* DoubleExtend.swift */,
+				2AA076831DED6D4100181694 /* FloatExtend.swift */,
 			);
 			path = Extend;
 			sourceTree = "<group>";
@@ -188,10 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6DC89C1D9659E500D46EEC /* SPHttpCookieManager.swift in Sources */,
+				2AA0767E1DED313200181694 /* SPRandomUtil.swift in Sources */,
+				2AA076801DED4D0B00181694 /* IntExtend.swift in Sources */,
 				2A07F4401D9512B200FD82F1 /* ViewController.swift in Sources */,
 				2A07F45A1D952CD900FD82F1 /* SPConvertUtil.swift in Sources */,
 				2A07F4571D9523AD00FD82F1 /* SPHttpUtil.swift in Sources */,
+				2AA076841DED6D4100181694 /* FloatExtend.swift in Sources */,
 				2A07F4551D951AA400FD82F1 /* SPHttpRequest.swift in Sources */,
+				2AA076821DED6AB000181694 /* DoubleExtend.swift in Sources */,
 				2AF21E7B1D9CE26D00318421 /* UIDeviceExtend.swift in Sources */,
 				2A07F4531D95136700FD82F1 /* SPHttpClient.swift in Sources */,
 				2A07F43E1D9512B200FD82F1 /* AppDelegate.swift in Sources */,

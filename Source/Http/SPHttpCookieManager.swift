@@ -47,5 +47,3 @@ class SPHttpCookieManager: NSObject {
     }
 
 }
-
-typealias SPHCM = SPHttpCookieManager

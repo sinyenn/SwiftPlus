@@ -33,7 +33,7 @@ class SPHttpClient: NSObject {
             let host = request.getURL().host!
             for c in cookies {
                 if c.domain == host {
-                    SPHCM.setCookie(host, c)
+                    SPHttpCookieManager.setCookie(host, c)
                 }
             }
             //回调处理方法
